@@ -416,223 +416,6 @@
       pointer-events: none;
     }
 
-    /* Project mockup 1 — campus app on phones */
-    .mockup-1 {
-      background: linear-gradient(135deg, #D41736 0%, #8B0E22 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      padding: 1.5rem;
-    }
-    .phone {
-      flex: 1;
-      max-width: 38%;
-      aspect-ratio: 9 / 19;
-      background: #fff;
-      border-radius: 18px;
-      padding: 0.6rem;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.3), 0 10px 20px rgba(0,0,0,0.2);
-      transform: rotate(-6deg);
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-    .phone:nth-child(2) { transform: translateY(-15px) rotate(2deg); z-index: 2; }
-    .phone:nth-child(3) { transform: rotate(6deg); }
-    .phone__header {
-      height: 8px;
-      background: #F5F2EC;
-      border-radius: 4px;
-      margin-bottom: 0.3rem;
-    }
-    .phone__card {
-      background: #F5F2EC;
-      border-radius: 6px;
-      padding: 0.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-    }
-    .phone__bar {
-      height: 4px;
-      background: #2D2828;
-      border-radius: 2px;
-      width: 70%;
-    }
-    .phone__bar--short { width: 40%; opacity: 0.5; }
-    .phone__bar--red { background: #D41736; width: 30%; }
-
-    /* Project mockup 2 — study app dashboard */
-    .mockup-2 {
-      background: #161513;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .browser-bar {
-      display: flex;
-      gap: 0.4rem;
-      align-items: center;
-      padding-bottom: 0.8rem;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .browser-bar .dot {
-      width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.2);
-    }
-    .browser-bar .url {
-      flex: 1;
-      margin-left: 0.8rem;
-      height: 18px;
-      background: rgba(255,255,255,0.08);
-      border-radius: 4px;
-    }
-    .mockup-2 .dash {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 0.8rem;
-      flex: 1;
-    }
-    .mockup-2 .stat-card {
-      background: rgba(255,255,255,0.06);
-      border-radius: 6px;
-      padding: 0.8rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .mockup-2 .stat-card .label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.6rem;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-    .mockup-2 .stat-card .num {
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-size: 1.8rem;
-      color: white;
-      line-height: 1;
-      font-weight: 600;
-      letter-spacing: -0.03em;
-    }
-    .mockup-2 .stat-card.accent { background: #D41736; }
-    .mockup-2 .stat-card.accent .label { color: rgba(255,255,255,0.8); }
-    .mockup-2 .chart {
-      grid-column: span 3;
-      background: rgba(255,255,255,0.06);
-      border-radius: 6px;
-      padding: 1rem;
-      display: flex;
-      align-items: end;
-      gap: 0.4rem;
-      height: 100%;
-    }
-    .bar {
-      flex: 1;
-      background: rgba(255,255,255,0.2);
-      border-radius: 2px;
-    }
-    .bar.hot { background: #D41736; }
-
-    /* Project mockup 3 — code/dev tool */
-    .mockup-3 {
-      background: #F5F2EC;
-      padding: 1.5rem;
-      font-family: 'JetBrains Mono', monospace;
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-    .mockup-3 .file-tabs {
-      display: flex;
-      gap: 0.3rem;
-    }
-    .mockup-3 .tab {
-      padding: 0.4rem 0.8rem;
-      background: rgba(0,0,0,0.05);
-      border-radius: 4px 4px 0 0;
-      font-size: 0.7rem;
-      color: var(--muted);
-    }
-    .mockup-3 .tab.active { background: white; color: var(--ink); }
-    .mockup-3 .code {
-      background: white;
-      padding: 1rem;
-      border-radius: 0 4px 4px 4px;
-      font-size: 0.7rem;
-      line-height: 1.6;
-      flex: 1;
-      color: var(--ink-soft);
-    }
-    .mockup-3 .code .line { display: flex; gap: 0.8rem; }
-    .mockup-3 .code .ln { color: var(--muted); width: 1.2rem; flex-shrink: 0; }
-    .mockup-3 .code .kw { color: var(--accent); }
-    .mockup-3 .code .str { color: #2BB673; }
-
-    /* Project mockup — AI chat agent */
-    .mockup-chat {
-      background: #FBF9F4;
-      padding: 1.4rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
-      justify-content: center;
-    }
-    .mockup-chat .chat-q {
-      align-self: flex-end;
-      max-width: 78%;
-      background: var(--ink);
-      color: var(--bone);
-      font-size: 0.78rem;
-      line-height: 1.4;
-      padding: 0.55rem 0.8rem;
-      border-radius: 14px 14px 4px 14px;
-    }
-    .mockup-chat .chat-tool {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.66rem;
-      color: var(--muted);
-      padding-left: 0.15rem;
-    }
-    .mockup-chat .chat-tool::before {
-      content: '';
-      width: 6px; height: 6px; border-radius: 50%;
-      background: #2BB673; flex-shrink: 0;
-    }
-    .mockup-chat .chat-a {
-      align-self: flex-start;
-      max-width: 90%;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 4px 14px 14px 14px;
-      padding: 0.75rem 0.85rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.45rem;
-    }
-    .mockup-chat .chat-a .ln {
-      height: 6px; border-radius: 3px;
-      background: rgba(22, 21, 19, 0.12);
-    }
-    .mockup-chat .chat-a .ln.w90 { width: 90%; }
-    .mockup-chat .chat-a .ln.w70 { width: 70%; }
-    .mockup-chat .chat-a .pick {
-      margin-top: 0.2rem;
-      display: flex; align-items: center; gap: 0.5rem;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.68rem;
-      color: var(--ink);
-      background: var(--accent-soft);
-      border-left: 2px solid var(--accent);
-      padding: 0.4rem 0.6rem;
-      border-radius: 0 4px 4px 0;
-    }
-
     @media (max-width: 820px) {
       .project, .project:nth-child(even) { grid-template-columns: 1fr; gap: 2rem; }
       .project:nth-child(even) .project__media { order: 0; }
@@ -702,6 +485,12 @@
     .project__points strong {
       color: var(--ink);
       font-weight: 600;
+    }
+    .project__links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.75rem;
     }
 
     /* ---------- TOOLKIT ---------- */
@@ -881,7 +670,7 @@
 
         <div class="hero__bottom">
           <p class="hero__intro">
-            Hi, I'm <strong>Abshir Haybe</strong>, a Computer Science senior at San Diego State University focused on <span class="highlight">software engineering.</span> I like building things end to end, from the data and logic underneath to the interface people actually touch. The work below is where that shows best: an AI research agent and a clinical analytics dashboard, each one designed, built, and shipped on my own.
+            Hi, I'm <strong>Abshir Haybe</strong>, a Computer Science senior at San Diego State University focused on <span class="highlight">software engineering.</span> I like building things end to end, from the data and logic underneath to the interface people actually touch. The work below is where that shows best: an AI research agent, a clinical analytics dashboard, and a front-end redesign, each one designed, built, and shipped on my own.
           </p>
           <aside class="hero__sidebar">
             <strong>Currently</strong>
@@ -944,7 +733,7 @@
           Things I've <span class="italic">made.</span>
         </h2>
         <p class="section__lede">
-          Two recent projects: an AI research agent built on the Anthropic API, and a clinical glucose analytics dashboard. Click through for the live site and a full breakdown of each.
+          Three recent projects: an AI research agent built on the Anthropic API, a clinical glucose analytics dashboard, and a from-scratch redesign of SDSU's startup incubator. Click through for the live demos and a full breakdown of each.
         </p>
 
         <article class="project project--purple">
@@ -1007,6 +796,36 @@
                    alt="CGM Dashboard detail: a daily glucose heatmap with each row a day and columns the time of day, plus an ADA 2024 target reference table." />
               <figcaption>Detail: daily glucose heatmap and ADA 2024 target reference.</figcaption>
             </figure>
+          </div>
+        </article>
+
+        <article class="project">
+          <div>
+            <div class="project__meta">[ Project 03 / 2026 / Front-end redesign ]</div>
+            <h3 class="project__title">ZIP Launchpad: rebuilding SDSU's startup incubator <em>from scratch.</em></h3>
+            <p class="project__desc">
+              A full front-end redesign concept for ZIP Launchpad, SDSU's on-campus startup incubator. I rebuilt the whole marketing site by hand: layout, type system, color, and interactions, all in plain HTML and CSS with no frameworks and no build step. It runs from the 24/7 workspace hero down to the founder alumni and events, and it stays sharp from desktop to phone.
+            </p>
+            <ul class="project__points">
+              <li><strong>Hand-coded, no frameworks.</strong> Every section is semantic HTML and modern CSS grid, so the entire page is one file that loads instantly with nothing to build.</li>
+              <li><strong>A real type and color system.</strong> Heavy Archivo display type, an SDSU-red accent, and a warm cream palette, tied together with CSS custom properties so the whole theme is consistent and swappable.</li>
+              <li><strong>Responsive and accessible.</strong> The grid reflows cleanly across breakpoints, with a skip link, visible focus styles, and labelled landmarks built in from the start.</li>
+            </ul>
+            <div class="project__tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Responsive</span>
+              <span class="tag">Design system</span>
+              <span class="tag">No frameworks</span>
+            </div>
+            <div class="project__links">
+              <a href="zip-launchpad/" class="project__link" target="_blank" rel="noopener">View the redesign <span aria-hidden="true">→</span></a>
+              <a href="https://github.com/abshirhaybe/zip-launchpad" class="project__link" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <div class="project__media project__media--shot">
+            <img src="assets/zip-launchpad.png"
+                 alt="ZIP Launchpad redesign: a bold red-and-cream landing page for SDSU's startup incubator, with the headline From dorm room to demo day and stat callouts." />
           </div>
         </article>
 

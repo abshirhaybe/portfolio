@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZIP Launchpad — SDSU's Startup Incubator | Redesign Concept</title>
+  <meta name="description" content="ZIP Launchpad is SDSU's award-winning, free on-campus startup incubator. Up to $5,000 in funding, 24/7 workspace, and mentorship from successful entrepreneurs — open to all majors." />
+  <meta name="keywords" content="SDSU, ZIP Launchpad, startup incubator, San Diego State University, student entrepreneurship, Zahn Innovation Platform" />
+  <meta property="og:title" content="ZIP Launchpad — SDSU's Startup Incubator" />
+  <meta property="og:description" content="From dorm room to demo day. SDSU's free, donor-funded incubator for students, faculty, and researchers." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Black&family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sdsu-red: #D41736;
+      --sdsu-red-dark: #A6192E;
+      --sdsu-black: #0A0A0A;
+      --sdsu-charcoal: #2D2828;
+      --sdsu-teal: #00A39D;
+      --cream: #F4EFE6;
+      --cream-warm: #EEE7D9;
+      --ink: #141414;
+      --muted: #6B645B;
+      --line: rgba(20, 20, 20, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    @media (max-width: 640px) { .container { padding: 0 1.25rem; } }
+
+    /* ---------- NAV ---------- */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(244, 239, 230, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+    .logo__mark {
+      width: 36px; height: 36px;
+      background: var(--sdsu-red);
+      color: white;
+      display: grid; place-items: center;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1rem;
+      transform: rotate(-4deg);
+      box-shadow: 3px 3px 0 var(--ink);
+    }
+    .nav__links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+    .nav__links a { position: relative; }
+    .nav__links a:hover::after {
+      content: ''; position: absolute; left: 0; bottom: -6px;
+      width: 100%; height: 2px; background: var(--sdsu-red);
+    }
+    .nav__cta {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 0.6rem 1.2rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .nav__cta:hover { background: var(--sdsu-red); transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--ink); }
+    @media (max-width: 820px) { .nav__links { display: none; } }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      padding: 5rem 0 6rem;
+      overflow: hidden;
+    }
+    .hero__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: end;
+    }
+    .hero__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--sdsu-red);
+      margin-bottom: 2rem;
+    }
+    .hero__eyebrow::before {
+      content: ''; width: 32px; height: 2px; background: var(--sdsu-red);
+    }
+    .hero__title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(3.2rem, 11vw, 9rem);
+      line-height: 0.88;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+      text-transform: uppercase;
+    }
+    .hero__title .italic {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-style: italic;
+      text-transform: lowercase;
+      letter-spacing: -0.02em;
+      color: var(--sdsu-red);
+    }
+    .hero__sub {
+      max-width: 540px;
+      margin-top: 2rem;
+      font-size: 1.15rem;
+      line-height: 1.55;
+      color: var(--sdsu-charcoal);
+    }
+    .hero__ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.95rem 1.6rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn--primary {
+      background: var(--sdsu-red);
+      color: white;
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+    .btn--primary:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+    .btn--ghost {
+      background: transparent;
+      color: var(--ink);
+      border: 2px solid var(--ink);
+    }
+    .btn--ghost:hover { background: var(--ink); color: var(--cream); }
+    .btn__arrow {
+      transition: transform 0.15s ease;
+    }
+    .btn:hover .btn__arrow { transform: translateX(3px); }
+
+    .hero__visual {
+      margin-top: 4rem;
+      position: relative;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1rem;
+      align-items: stretch;
+    }
+    .hero__card {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 2rem;
+      position: relative;
+    }
+    .hero__card--accent { background: var(--sdsu-red); }
+    .hero__card h3 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+    .hero__card p {
+      font-size: 0.92rem;
+      line-height: 1.5;
+      opacity: 0.85;
+    }
+    .hero__card .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      opacity: 0.6;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 720px) {
+      .hero__visual { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- STAT BAR ---------- */
+    .stats {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 3rem 0;
+      border-top: 6px solid var(--sdsu-red);
+    }
+    .stats__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .stat__num {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 3.6rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: white;
+    }
+    .stat__num .symbol { color: var(--sdsu-red); }
+    .stat__label {
+      margin-top: 0.6rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.7;
+    }
+    @media (max-width: 720px) {
+      .stats__grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    }
+
+    /* ---------- SECTION GENERIC ---------- */
+    section { padding: 6rem 0; }
+    @media (max-width: 720px) { section { padding: 4rem 0; } }
+    .section__head {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: end;
+      margin-bottom: 4rem;
+    }
+    .section__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--sdsu-red);
+      margin-bottom: 1.5rem;
+    }
+    .section__eyebrow::before {
+      content: ''; width: 24px; height: 2px; background: var(--sdsu-red);
+    }
+    .section__title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+    }
+    .section__title .italic {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-weight: 400;
+      text-transform: lowercase;
+      letter-spacing: -0.01em;
+      color: var(--sdsu-red);
+    }
+    .section__desc {
+      font-size: 1.05rem;
+      color: var(--sdsu-charcoal);
+      max-width: 460px;
+    }
+    @media (max-width: 720px) {
+      .section__head { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2.5rem; }
+    }
+
+    /* ---------- WHAT YOU GET ---------- */
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+    }
+    .benefit {
+      background: var(--cream);
+      padding: 2.5rem 2rem;
+      transition: background 0.2s ease, color 0.2s ease;
+      cursor: default;
+      position: relative;
+    }
+    .benefit:nth-child(2) { background: var(--sdsu-red); color: white; }
+    .benefit:nth-child(2) .benefit__amount { color: white; }
+    .benefit:hover { background: var(--ink); color: var(--cream); }
+    .benefit:hover .benefit__amount { color: var(--sdsu-red); }
+    .benefit:nth-child(2):hover { background: var(--ink); color: var(--cream); }
+    .benefit__num {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      opacity: 0.6;
+      margin-bottom: 1.5rem;
+    }
+    .benefit__amount {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.8rem;
+      color: var(--sdsu-red);
+    }
+    .benefit__title {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.6rem;
+    }
+    .benefit__desc {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      opacity: 0.8;
+    }
+    @media (max-width: 820px) {
+      .benefits { grid-template-columns: 1fr 1fr; }
+      .benefit, .benefit:nth-child(1), .benefit:nth-child(2) { grid-column: span 1; }
+    }
+    @media (max-width: 520px) {
+      .benefits { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- HOW IT WORKS ---------- */
+    .process {
+      background: var(--cream-warm);
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      counter-reset: step;
+    }
+    .step {
+      counter-increment: step;
+      padding-top: 2rem;
+      border-top: 2px solid var(--ink);
+      position: relative;
+    }
+    .step::before {
+      content: '0' counter(step);
+      position: absolute;
+      top: -1.3rem;
+      left: 0;
+      background: var(--cream-warm);
+      padding-right: 1rem;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.3rem;
+      color: var(--sdsu-red);
+      letter-spacing: -0.02em;
+    }
+    .step__title {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.8rem;
+    }
+    .step__desc {
+      color: var(--sdsu-charcoal);
+      line-height: 1.55;
+    }
+    @media (max-width: 720px) {
+      .steps { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- ALUMNI ---------- */
+    .alumni {
+      background: var(--ink);
+      color: var(--cream);
+    }
+    .alumni .section__title { color: var(--cream); }
+    .alumni .section__desc { color: rgba(244, 239, 230, 0.7); }
+    .alumni .section__eyebrow { color: var(--sdsu-red); }
+    .alumni-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .alumnus {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(244, 239, 230, 0.12);
+      padding: 2rem;
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .alumnus::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--sdsu-red);
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      z-index: 0;
+    }
+    .alumnus:hover::before { transform: translateY(0); }
+    .alumnus > * { position: relative; z-index: 1; }
+    .alumnus__year {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      opacity: 0.6;
+      margin-bottom: 1rem;
+    }
+    .alumnus__name {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+      line-height: 1;
+    }
+    .alumnus__founder {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      opacity: 0.8;
+      margin-bottom: 1.5rem;
+    }
+    .alumnus__desc {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      opacity: 0.85;
+    }
+    @media (max-width: 820px) { .alumni-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .alumni-grid { grid-template-columns: 1fr; } }
+
+    /* ---------- EVENTS ---------- */
+    .events-list {
+      border-top: 1px solid var(--ink);
+    }
+    .event {
+      display: grid;
+      grid-template-columns: 140px 1fr auto;
+      gap: 2rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--ink);
+      align-items: center;
+      transition: padding 0.2s ease;
+    }
+    .event:hover { padding-left: 1rem; }
+    .event__date {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: -0.01em;
+    }
+    .event__date .day {
+      font-size: 2.2rem;
+      color: var(--sdsu-red);
+      display: block;
+      line-height: 1;
+    }
+    .event__title {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.3rem;
+    }
+    .event__meta {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .event__rsvp {
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.5rem 1.2rem;
+      border: 1.5px solid var(--ink);
+      transition: all 0.15s ease;
+    }
+    .event__rsvp:hover { background: var(--ink); color: var(--cream); }
+    @media (max-width: 720px) {
+      .event { grid-template-columns: 80px 1fr; gap: 1rem; }
+      .event__date .day { font-size: 1.6rem; }
+      .event__rsvp { grid-column: 1 / -1; justify-self: start; }
+    }
+
+    /* ---------- CTA ---------- */
+    .cta-section {
+      background: var(--sdsu-red);
+      color: white;
+      padding: 7rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: 'APPLY';
+      position: absolute;
+      bottom: -2rem;
+      right: -2rem;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 22vw;
+      line-height: 0.85;
+      color: rgba(0, 0, 0, 0.08);
+      letter-spacing: -0.05em;
+      pointer-events: none;
+    }
+    .cta__title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+      max-width: 900px;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .cta__title .italic {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-style: italic;
+      text-transform: lowercase;
+      letter-spacing: -0.01em;
+      color: var(--cream);
+    }
+    .cta__sub {
+      font-size: 1.15rem;
+      max-width: 540px;
+      margin-bottom: 2.5rem;
+      opacity: 0.95;
+      position: relative;
+    }
+    .cta-section .btn--primary {
+      background: var(--ink);
+      box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);
+    }
+    .cta-section .btn--ghost {
+      border-color: white;
+      color: white;
+    }
+    .cta-section .btn--ghost:hover {
+      background: white;
+      color: var(--sdsu-red);
+    }
+    .cta__ctas { position: relative; display: flex; flex-wrap: wrap; gap: 1rem; }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 4rem 0 2rem;
+    }
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    .footer__col h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 1.2rem;
+      opacity: 0.6;
+    }
+    .footer__col ul { list-style: none; }
+    .footer__col li { margin-bottom: 0.7rem; }
+    .footer__col a { font-size: 0.95rem; opacity: 0.8; transition: opacity 0.15s; }
+    .footer__col a:hover { opacity: 1; color: var(--sdsu-red); }
+    .footer__brand p {
+      max-width: 360px;
+      opacity: 0.7;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-top: 1rem;
+    }
+    .partners {
+      padding: 2rem 0;
+      border-top: 1px solid rgba(244, 239, 230, 0.1);
+      border-bottom: 1px solid rgba(244, 239, 230, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .partners__label {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+    .partner {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+    .footer__legal {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      opacity: 0.5;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    @media (max-width: 820px) {
+      .footer__grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 520px) {
+      .footer__grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    /* ---------- ENTRANCE ANIMATIONS ---------- */
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero__eyebrow, .hero__title, .hero__sub, .hero__ctas, .hero__visual {
+      animation: rise 0.8s ease-out backwards;
+    }
+    .hero__title { animation-delay: 0.1s; }
+    .hero__sub { animation-delay: 0.25s; }
+    .hero__ctas { animation-delay: 0.35s; }
+    .hero__visual { animation-delay: 0.5s; }
+
+    /* Skip link for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--ink);
+      color: var(--cream);
+      padding: 0.5rem 1rem;
+      z-index: 1000;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* Focus styles */
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--sdsu-red);
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="https://ziplaunchpad.sdsu.edu/" class="logo" aria-label="ZIP Launchpad home" target="_blank" rel="noopener">
+        <span class="logo__mark" aria-hidden="true">Z</span>
+        <span>ZIP&nbsp;LAUNCHPAD</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="https://ziplaunchpad.sdsu.edu/about" target="_blank" rel="noopener">About</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#process">How it Works</a></li>
+          <li><a href="#alumni">Alumni</a></li>
+          <li><a href="#events">Events</a></li>
+        </ul>
+      </nav>
+      <a href="https://ziplaunchpad.sdsu.edu/APPLY" class="nav__cta" target="_blank" rel="noopener">Apply now →</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <span class="hero__eyebrow">SDSU's startup incubator · est. 2014</span>
+        <h1 id="hero-title" class="hero__title">
+          From dorm&nbsp;room<br />
+          <span class="italic">to demo&nbsp;day.</span>
+        </h1>
+        <p class="hero__sub">
+          The ZIP Launchpad is SDSU's free, donor-funded, on-campus incubator for students, faculty, and researchers — open to every major, every idea, every semester. We don't take equity. We don't gatekeep. We help you build.
+        </p>
+        <div class="hero__ctas">
+          <a href="https://ziplaunchpad.sdsu.edu/APPLY" class="btn btn--primary" target="_blank" rel="noopener">
+            Start an application
+            <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="https://ziplaunchpad.sdsu.edu/about" class="btn btn--ghost" target="_blank" rel="noopener">
+            What is ZIP?
+          </a>
+        </div>
+
+        <div class="hero__visual">
+          <article class="hero__card">
+            <span class="label">Where we live</span>
+            <h3>EISC&nbsp;103 — open&nbsp;24/7</h3>
+            <p>Our collaborative workspace inside the Engineering &amp; Interdisciplinary Sciences building. Founders code at 2am. We unlock the door.</p>
+          </article>
+          <article class="hero__card hero__card--accent">
+            <span class="label">No equity. Ever.</span>
+            <h3>0%</h3>
+            <p>Donor-funded by founders, for founders. You keep what you build.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" aria-label="ZIP Launchpad by the numbers">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat">
+            <div class="stat__num"><span class="symbol">$</span>5K</div>
+            <div class="stat__label">Working capital grants</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">24<span class="symbol">/</span>7</div>
+            <div class="stat__label">Workspace access</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">100<span class="symbol">+</span></div>
+            <div class="stat__label">Mentors &amp; advisors</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">10<span class="symbol">+</span></div>
+            <div class="stat__label">Years launching founders</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section id="benefits" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="section__eyebrow">What you actually get</span>
+            <h2 id="benefits-title" class="section__title">
+              Resources<br /><span class="italic">that move</span> the needle.
+            </h2>
+          </div>
+          <p class="section__desc">
+            Everything below is free to admitted teams. Funded by the Moxie Foundation, H.G. Fenton Company, SDG&amp;E, and other donors who believe in student-led innovation.
+          </p>
+        </div>
+
+        <div class="benefits">
+          <article class="benefit">
+            <div class="benefit__num">→ 01</div>
+            <div class="benefit__amount">Up to $5,000</div>
+            <h3 class="benefit__title">Success Fund grants</h3>
+            <p class="benefit__desc">Working capital to validate your idea, build a prototype, or run customer discovery. No equity, no strings.</p>
+          </article>
+
+          <article class="benefit">
+            <div class="benefit__num">→ 02</div>
+            <div class="benefit__amount">Pro bono</div>
+            <h3 class="benefit__title">Legal &amp; IP guidance</h3>
+            <p class="benefit__desc">Free counsel from the law offices of Mintz Levin — from incorporation to trademark to founder agreements.</p>
+          </article>
+
+          <article class="benefit">
+            <div class="benefit__num">→ 03</div>
+            <div class="benefit__amount">Idea Lab</div>
+            <h3 class="benefit__title">H.G. Fenton prototyping space</h3>
+            <p class="benefit__desc">3D printers, laser cutters, electronics, and the tools to make your prototype tangible.</p>
+          </article>
+
+          <article class="benefit">
+            <div class="benefit__num">→ 04</div>
+            <div class="benefit__amount">100+</div>
+            <h3 class="benefit__title">Mentors &amp; advisors</h3>
+            <p class="benefit__desc">Founders, executives, and domain experts who've actually shipped. You get the network on day one.</p>
+          </article>
+
+          <article class="benefit">
+            <div class="benefit__num">→ 05</div>
+            <div class="benefit__amount">24/7</div>
+            <h3 class="benefit__title">Workspace in EISC 103</h3>
+            <p class="benefit__desc">Collaborative space designed for builders. Whiteboards, fast wifi, and a community of people doing the same thing.</p>
+          </article>
+
+          <article class="benefit">
+            <div class="benefit__num">→ 06</div>
+            <div class="benefit__amount">Always</div>
+            <h3 class="benefit__title">Pitch &amp; demo opportunities</h3>
+            <p class="benefit__desc">Showcase events, investor intros, and a pipeline to the SDAC and external funding networks.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="section__eyebrow">How it works</span>
+            <h2 id="process-title" class="section__title">
+              Three steps<br /><span class="italic">to launch.</span>
+            </h2>
+          </div>
+          <p class="section__desc">
+            We accept new cohorts each semester. Applications open in Fall and Spring. The earlier you start, the more you'll get out of it.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <h3 class="step__title">Apply &amp; identify your problem</h3>
+            <p class="step__desc">All you need is a problem you're passionate about solving. No business plan required. We accept students, faculty, staff, and researchers from every major.</p>
+          </article>
+
+          <article class="step">
+            <h3 class="step__title">Validate &amp; build</h3>
+            <p class="step__desc">Weekly programming (3–6 hrs) walks you from problem to solution to prototype. Mentors, lab space, and Success Fund grants unlock as you progress.</p>
+          </article>
+
+          <article class="step">
+            <h3 class="step__title">Pitch, fund, &amp; ship</h3>
+            <p class="step__desc">Within two years, exit with a viable, growth-oriented business — and a network of founders, investors, and operators behind you.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALUMNI -->
+    <section id="alumni" class="alumni" aria-labelledby="alumni-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="section__eyebrow">Founders who started here</span>
+            <h2 id="alumni-title" class="section__title">
+              Built at SDSU.<br /><span class="italic">Scaled everywhere.</span>
+            </h2>
+          </div>
+          <p class="section__desc">
+            From sustainable beachwear to fitness franchises to athlete endorsement platforms — Aztec founders are shipping real companies. Here are a few.
+          </p>
+        </div>
+
+        <div class="alumni-grid">
+          <a class="alumnus" href="https://www.sandcloud.com/" target="_blank" rel="noopener" aria-label="Visit the Sand Cloud website">
+            <div class="alumnus__year">2012 · SDSU '12</div>
+            <h3 class="alumnus__name">Sand Cloud</h3>
+            <p class="alumnus__founder">Brandon Leibel</p>
+            <p class="alumnus__desc">Sustainable beach lifestyle brand donating 10% of profits to marine conservation. Featured on Shark Tank.</p>
+          </a>
+
+          <a class="alumnus" href="https://shakesmart.com/" target="_blank" rel="noopener" aria-label="Visit the Shake Smart website">
+            <div class="alumnus__year">2011 · SDSU '11</div>
+            <h3 class="alumnus__name">Shake Smart</h3>
+            <p class="alumnus__founder">Kevin Gelfand</p>
+            <p class="alumnus__desc">Fast, healthy protein shakes and smoothies that started at SDSU and grew into a national franchise.</p>
+          </a>
+
+          <a class="alumnus" href="https://shredlights.com/" target="_blank" rel="noopener" aria-label="Visit the ShredLights website">
+            <div class="alumnus__year">2013 · SDSU</div>
+            <h3 class="alumnus__name">ShredLights</h3>
+            <p class="alumnus__founder">Eric Birkemeier</p>
+            <p class="alumnus__desc">Skateboard lights for night riders. Hardware, e-commerce, and one of ZIP's standout prototyping success stories.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events" aria-labelledby="events-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="section__eyebrow">What's next</span>
+            <h2 id="events-title" class="section__title">
+              Come to a thing.<br /><span class="italic">Free for SDSU.</span>
+            </h2>
+          </div>
+          <p class="section__desc">
+            Workshops, founder panels, and pitch nights — all free to current SDSU students with a valid SDSU email.
+          </p>
+        </div>
+
+        <div class="events-list">
+          <article class="event">
+            <div class="event__date"><span class="day">14</span>OCT</div>
+            <div>
+              <h3 class="event__title">Startup Stories: Founder Panel</h3>
+              <p class="event__meta">6:00 PM · EISC 103 · Free with SDSU email</p>
+            </div>
+            <a href="https://ziplaunchpad.sdsu.edu/events" class="event__rsvp" target="_blank" rel="noopener">RSVP</a>
+          </article>
+          <article class="event">
+            <div class="event__date"><span class="day">22</span>OCT</div>
+            <div>
+              <h3 class="event__title">Customer Discovery Workshop</h3>
+              <p class="event__meta">5:30 PM · Idea Lab · Open to all majors</p>
+            </div>
+            <a href="https://ziplaunchpad.sdsu.edu/events" class="event__rsvp" target="_blank" rel="noopener">RSVP</a>
+          </article>
+          <article class="event">
+            <div class="event__date"><span class="day">05</span>NOV</div>
+            <div>
+              <h3 class="event__title">Pitch Night &amp; Demo Showcase</h3>
+              <p class="event__meta">7:00 PM · Conrad Prebys Aztec Student Union</p>
+            </div>
+            <a href="https://ziplaunchpad.sdsu.edu/events" class="event__rsvp" target="_blank" rel="noopener">RSVP</a>
+          </article>
+          <article class="event">
+            <div class="event__date"><span class="day">19</span>NOV</div>
+            <div>
+              <h3 class="event__title">Fall Cohort Demo Day</h3>
+              <p class="event__meta">5:00 PM · Open to investors and the public</p>
+            </div>
+            <a href="https://ziplaunchpad.sdsu.edu/events" class="event__rsvp" target="_blank" rel="noopener">RSVP</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="apply" class="cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title" class="cta__title">
+          You have an idea.<br />
+          <span class="italic">we have the runway.</span>
+        </h2>
+        <p class="cta__sub">
+          Applications for the next cohort are open now. Free to apply, free to participate, free to fail forward. Just bring the problem you want to solve.
+        </p>
+        <div class="cta__ctas">
+          <a href="https://ziplaunchpad.sdsu.edu/APPLY" class="btn btn--primary" target="_blank" rel="noopener">
+            Apply for Fall 2026
+            <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="https://ziplaunchpad.sdsu.edu/about/faq" class="btn btn--ghost" target="_blank" rel="noopener">Read the FAQ</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="partners">
+        <span class="partners__label">Donor partners</span>
+        <span class="partner">Moxie Foundation</span>
+        <span class="partner">H.G. Fenton Company</span>
+        <span class="partner">SDG&amp;E</span>
+        <span class="partner">Mintz Levin</span>
+      </div>
+
+      <div class="footer__grid">
+        <div class="footer__col footer__brand">
+          <a href="https://ziplaunchpad.sdsu.edu/" class="logo" aria-label="ZIP Launchpad home" target="_blank" rel="noopener">
+            <span class="logo__mark" aria-hidden="true">Z</span>
+            <span>ZIP&nbsp;LAUNCHPAD</span>
+          </a>
+          <p>SDSU's free, on-campus startup incubator. Helping students, faculty, and researchers turn ideas into companies since 2014.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Program</h4>
+          <ul>
+            <li><a href="https://ziplaunchpad.sdsu.edu/about" target="_blank" rel="noopener">About</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#process">How it works</a></li>
+            <li><a href="https://ziplaunchpad.sdsu.edu/about/faq" target="_blank" rel="noopener">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="#alumni">Alumni</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="https://ziplaunchpad.sdsu.edu/about" target="_blank" rel="noopener">Mentors</a></li>
+            <li><a href="https://ziplaunchpad.sdsu.edu/news" target="_blank" rel="noopener">Newsletter</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Visit</h4>
+          <ul>
+            <li>EISC 103</li>
+            <li>5500 Campanile Dr</li>
+            <li>San Diego, CA 92182</li>
+            <li><a href="mailto:ziplaunchpad@sdsu.edu">ziplaunchpad@sdsu.edu</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__legal">
+        <span>© 2026 San Diego State University · ZIP Launchpad</span>
+        <span>Concept redesign — not an official SDSU site</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
